@@ -1,9 +1,10 @@
 import React,{useContext, useEffect, useState} from 'react';
 import{Link, useNavigate} from 'react-router-dom';
+import {AuthContext} from "../components/context/auth.context"
 
-function register() {
+function Register() {
     const navigate =useNavigate();
-    const {success, loading, user}=useContext();
+    const {success, loading, user, authRegister}=useContext();
     const[username, setUsename] = useState("");
     const [email, setEmail] = useState();
     const [password, setPassword] = useState("");
@@ -42,4 +43,4 @@ function register() {
   )
 }
 
-export default register
+export default  Register
